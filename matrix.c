@@ -6,7 +6,7 @@ void AddMatrix(int  **matrixA , int **matrixB);        //행렬 덧셈 함수: �
 void Subtract(int  **matrixA , int **matrixB);         //행렬 뺄셈 함수: 결과값을 PrintMatrix() 함수 호출로 출력
 void Transpose(int  **matrixA );                       //행렬 전치 함수: 결과값을 PrintMatrix() 함수 호출로 출력
 void MultiplyMatrix(int  **matrixA , int **matrixB);   //행렬 곱셈 함수: 결과값을 PrintMatrix() 함수 호출로 출력
-void Free(int **matrix);                               //동적 메모리 할당 해제 함수
+void free_matrix(int **matrix);                               //동적 메모리 할당 해제 함수
 
 int rowA,colA;  //행렬 A의 행(row)과 열(col)의 수를 전역변수로 설정: 모든 함수가 행과 열의 개수를 알아야 하므로 매개변수를 사용하기보단 전역변수로 사용하는 것이 효율적임.
 int rowB,colB;  //행령 B의 행(row)과 열(col)의 수를 전역변수로 설정: 모든 함수가 행과 열의 개수를 알아야 하므로 매개변수를 사용하기보단 전역변수로 사용하는 것이 효율적임.
@@ -99,8 +99,8 @@ int main(void){
     MultiplyMatrix(matrixA,matrixB);
 
      //동적 메모리 할당 해제 함수 호출
-    Free(matrixA);
-    Free(matrixB);
+    free_matrix(matrixA);
+    free_matrix(matrixB);
 
     return 0;
 }
@@ -146,7 +146,7 @@ void AddMatrix(int  **matrixA , int **matrixB)
     PrintMatrix(matrix);  //결과 출력 함수 호출
 
      //동적 메모리 할당 해제 함수 호출
-    Free(matrix);
+    free_matrix(matrix);
 }
 
 
@@ -174,7 +174,7 @@ void Subtract(int  **matrixA , int **matrixB)
 
     PrintMatrix(matrix);  //결과 출력 함수 호출
      //동적 메모리 할당 해제 함수 호출
-    Free(matrix);
+    free_matrix(matrix);
 }     
 
 //행렬 전치 함수: 결과값을 PrintMatrix() 함수 호출로 출력해야하므로 int*를 반환형으로 설정함.
@@ -199,7 +199,7 @@ void Transpose(int  **matrixA )
 
     PrintMatrix(matrix);  //결과 출력 함수 호출
      //동적 메모리 할당 해제 함수 호출
-    Free(matrix);
+    free_matrix(matrix);
 
 }
 
@@ -233,12 +233,12 @@ void MultiplyMatrix(int  **matrixA , int **matrixB)
     PrintMatrix(matrix);  //결과 출력 함수 호출
 
     //동적 메모리 할당 해제 함수 호출
-    Free(matrix);
+    free_matrix(matrix);
 }
 
 
 //동적 메모리 할당 해제 함수
-void Free(int **matrix)
+void free_matrix(int **matrix)
 {   
     int i;
     free(matrix);
