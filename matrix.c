@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h> //malloc 함수가 포함된 헤더 파일
 
+
 void PrintMatrix(int **matrix);                        //행렬 출력 함수
 void AddMatrix(int  **matrixA , int **matrixB);        //행렬 덧셈 함수: 결과값을 PrintMatrix() 함수 호출로 출력
 void Subtract(int  **matrixA , int **matrixB);         //행렬 뺄셈 함수: 결과값을 PrintMatrix() 함수 호출로 출력
