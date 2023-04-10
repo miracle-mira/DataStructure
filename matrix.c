@@ -122,7 +122,7 @@ void PrintMatrix(int **matrix)
 }
 
 
-//행렬 덧셈 함수: 결과값을 PrintMatrix() 함수 호출로 출력해야하므로 int*를 반환형으로 설정함.
+//행렬 덧셈 함수
 void AddMatrix(int  **matrixA , int **matrixB)
 {
     int i,z; //반복문 변수
@@ -151,7 +151,7 @@ void AddMatrix(int  **matrixA , int **matrixB)
 
 
 
- //행렬 뺄셈 함수: 결과값을 PrintMatrix() 함수 호출로 출력해야하므로 int*를 반환형으로 설정함.
+ //행렬 뺄셈 함수
 void Subtract(int  **matrixA , int **matrixB)
 {
     int i,z; //반복문 변수
@@ -177,7 +177,7 @@ void Subtract(int  **matrixA , int **matrixB)
     free_matrix(matrix);
 }     
 
-//행렬 전치 함수: 결과값을 PrintMatrix() 함수 호출로 출력해야하므로 int*를 반환형으로 설정함.
+//행렬 전치 함수
 void Transpose(int  **matrixA )
 {
     int i,z; //반복문 변수
@@ -204,7 +204,7 @@ void Transpose(int  **matrixA )
 }
 
 
-//행렬 곱셈 함수: 결과값을 PrintMatrix() 함수 호출로 출력해야하므로 int*를 반환형으로 설정함.
+//행렬 곱셈 함수
 void MultiplyMatrix(int  **matrixA , int **matrixB)
 {
     int i,z,x; //반복문 변수
