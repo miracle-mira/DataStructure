@@ -42,17 +42,17 @@ int main(void){
     printf("\n\n");
     matrixA = (int **)malloc(sizeof(int *) * rowA); 
 
-    //행렬A의 각 행에 열을 동적메모리로 할당 받아 저장
+    //행렬A의 각 행에 열을 동적메모리로 할당 받아 저장: 이때 열에는 데이터 값을 저장할 것이기 때문에 int형으로 크기 조절함.
     for(i=0;i<rowA;i++){
-        *(matrixA+i) = (int *)malloc(sizeof(int *) * colA);
+        *(matrixA+i) = (int *)malloc(sizeof(int) * colA);
     }
 
     //행렬B의 행을 동적 메모리로 할당
     matrixB = (int **)malloc(sizeof(int *) * rowB); 
 
-    //행렬B의 각 행에 열을 동적메모리로 할당 받아 저장
+    //행렬B의 각 행에 열을 동적메모리로 할당 받아 저장: 이때 열에는 데이터 값을 저장할 것이기 때문에 int형으로 크기 조절함.
     for(i=0;i<rowB;i++){
-        *(matrixB+i) = (int *)malloc(sizeof(int *) * colB);
+        *(matrixB+i) = (int *)malloc(sizeof(int) * colB);
     }
 
     //행렬A 값 채우기
@@ -131,9 +131,9 @@ void AddMatrix(int  **matrixA , int **matrixB)
     //덧셈을 저장할 행렬의 행을 동적 메모리로 할당: 행렬 A와 B의 열과 행의 수는 같기 때문에 rowA,colA를 사용함.
     int **matrix = (int **)malloc(sizeof(int *) * rowA); 
 
-    //행렬의 각 행에 열을 동적메모리로 할당 받아 저장
+    //행렬의 각 행에 열을 동적메모리로 할당 받아 저장: 이때 열에는 데이터 값을 저장할 것이기 때문에 int형으로 크기 조절함.
     for(i=0;i<rowA;i++){
-        *(matrix+i) = (int *)malloc(sizeof(int *) * colA);
+        *(matrix+i) = (int *)malloc(sizeof(int) * colA);
 
     }
 
@@ -160,9 +160,9 @@ void Subtract(int  **matrixA , int **matrixB)
     //뺄셈을 저장할 행렬의 행을 동적 메모리로 할당: 행렬 A와 B의 열과 행의 수는 같기 때문에 rowA,colA를 사용함.
     int **matrix = (int **)malloc(sizeof(int *) * rowA); 
 
-    //행렬의 각 행에 열을 동적메모리로 할당 받아 저장
+    //행렬의 각 행에 열을 동적메모리로 할당 받아 저장: 이때 열에는 데이터 값을 저장할 것이기 때문에 int형으로 크기 조절함.
     for(i=0;i<rowA;i++){
-        *(matrix+i) = (int *)malloc(sizeof(int *) * colA);
+        *(matrix+i) = (int *)malloc(sizeof(int) * colA);
 
     }
 
@@ -186,9 +186,9 @@ void Transpose(int  **matrixA )
     //전치한 행렬A를 저장할 행렬의 행을 동적 메모리로 할당: 행렬 A와 B의 열과 행의 수는 같기 때문에 rowA,colA를 사용함.
     int **matrix = (int **)malloc(sizeof(int *) * rowA); 
 
-    //행렬의 각 행에 열을 동적메모리로 할당 받아 저장
+    //행렬의 각 행에 열을 동적메모리로 할당 받아 저장: 이때 열에는 데이터 값을 저장할 것이기 때문에 int형으로 크기 조절함.
     for(i=0;i<rowA;i++){
-        *(matrix+i) = (int *)malloc(sizeof(int *) * colA);
+        *(matrix+i) = (int *)malloc(sizeof(int) * colA);
     }
 
     //전치 후 저장
@@ -213,9 +213,9 @@ void MultiplyMatrix(int  **matrixA , int **matrixB)
     //곱셈한 행렬의 행을 동적 메모리로 할당: 행렬 A와 B의 열과 행의 수는 같기 때문에 rowA,colA를 사용함.
     int **matrix = (int **)malloc(sizeof(int *) * rowA); 
 
-    //행렬의 각 행에 열을 동적메모리로 할당 받아 저장
+    //행렬의 각 행에 열을 동적메모리로 할당 받아 저장: 이때 열에는 데이터 값을 저장할 것이기 때문에 int형으로 크기 조절함.
     for(i=0;i<rowA;i++){
-        *(matrix+i) = (int *)malloc(sizeof(int *) * colA);
+        *(matrix+i) = (int *)malloc(sizeof(int) * colA);
     }
 
     //곱셈 후 저장
